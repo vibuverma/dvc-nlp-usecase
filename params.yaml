@@ -3,3 +3,7 @@
 prepare:
   split: 0.20 
   seed: 7
+
+featurize:
+  max_features: 3000
+  n_grams: 2

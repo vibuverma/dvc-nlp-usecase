@@ -3,8 +3,10 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils.common import read_yaml, create_directories
+from src.utils.common import read_yaml, create_directories, get_df
 import random
+import numpy as np
+
 
 
 STAGE = "Two" ## <<< change stage name 
@@ -30,12 +32,19 @@ def main(config_path, params_path):
     train_data_path= os.path.join(prepared_data_dir_path, artifacts["TRAIN_DATA"])
     test_data_path= os.path.join(prepared_data_dir_path, artifacts["TEST_DATA"])
 
-    featurized_data_dir_path= os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["featurized_DATA"])
+    featurized_data_dir_path= os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["FEATURIZED_DATA"])
     create_directories([featurized_data_dir_path])
 
     featurized_train_data_path= os.path.join(featurized_data_dir_path, artifacts["FEATURIZED_OUT_TRAIN"])
     featurized_test_data_path= os.path.join(prepared_data_dir_path, artifacts["FEATURIZED_OUT_TEST"])
 
+    max_features= params["featurize"]["max_features"]
+    n_grams= params["featurize"]["n_grams"]
+
+
+    df_train= get_df(train_data_path)
+
+    train_words= np.appray(df_train["text"].str.lower().values.astype("U"))
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
