@@ -46,7 +46,7 @@ def main(config_path, params_path):
     X= matrix[:,2:]
 
     predicitions_by_class= model.predict_proba(X)
-    predicitions= predicitions_by_class[:1]
+    predicitions= predicitions_by_class[:, 1]
 
     PRC_json_path= config["plots"]["PRC"]
     ROC_json_path= config["plots"]["ROC"]
@@ -78,7 +78,7 @@ def main(config_path, params_path):
     }
     save_json(PRC_json_path, prc_data)
 
-    
+
     fpr, trp, roc_thresholds = metrics.roc_curve(labels, predicitions)
 
 
