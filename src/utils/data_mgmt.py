@@ -11,7 +11,7 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     line_num= 1
     for line in tqdm(fd_in):
         try:
-            fd_out= fd_out_train if random.random() > split else fd_out_test
+            fd_out= fd_out_train if random.random() > split else fd_out_test # if random is grater than split like random is 80 percent then make it train else make it test
             attr= ET.fromstring(line).attrib
 
             pid= attr.get("Id", "")

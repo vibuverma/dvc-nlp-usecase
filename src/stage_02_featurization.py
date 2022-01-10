@@ -6,6 +6,7 @@ import logging
 from src.utils.common import read_yaml, create_directories, get_df
 import random
 import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 
 
@@ -45,6 +46,8 @@ def main(config_path, params_path):
     df_train= get_df(train_data_path)
 
     train_words= np.appray(df_train["text"].str.lower().values.astype("U"))
+
+    
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
