@@ -32,4 +32,9 @@ def get_df(train_data_path: str) -> pd.DataFrame:
         names=["id", "label", "text"],)
     logging.info(f"the input data frame {train_data_path} size if {df.shape}\n")
     return df
+
+def json_save(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
+    logging.info(f"json file saved at: {path}")
     
