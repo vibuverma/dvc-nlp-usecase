@@ -38,7 +38,7 @@ def main(config_path, params_path):
     create_directories([featurized_data_dir_path])
 
     featurized_train_data_path= os.path.join(featurized_data_dir_path, artifacts["FEATURIZED_OUT_TRAIN"])
-    featurized_test_data_path= os.path.join(prepared_data_dir_path, artifacts["FEATURIZED_OUT_TEST"])
+    featurized_test_data_path= os.path.join(featurized_data_dir_path, artifacts["FEATURIZED_OUT_TEST"])
 
     max_features= params["featurize"]["max_features"]
     n_grams= params["featurize"]["n_grams"]
@@ -65,6 +65,15 @@ def main(config_path, params_path):
 
     save_matrix(df_train, train_words_tfidf_matrix, featurized_train_data_path)
 
+
+
+    df_test= get_df(test_data_path)
+    test_words= np.array(df_test["text"].str.lower().values.astype("U"))
+
+    test_words_binary_matrix= bag_of_words.transform(test_words)
+    test_words_tfidf_matrix= tfidf.transform(test_words_binary_matrix)
+
+    save_matrix(df_test, test_words_tfidf_matrix, featurized_test_data_path)
 
 
 
