@@ -1,11 +1,11 @@
 schema: '2.0'
 stages:
   prepare_data:
-    cmd: python src/stage_01_prepare.py
+    cmd: python src/stage_01_prepare.py --config=configs/config.yaml --params=params.yaml
     deps:
     - path: configs/config.yaml
-      md5: 74aeec8bff9d240b1a65437b478eddd8
-      size: 301
+      md5: 08183722cb3ac2fd82095185f5ce245f
+      size: 402
     - path: data/data.xml
       md5: a304afb96060aad90176268345e10355
       size: 37891850
@@ -13,11 +13,11 @@ stages:
       md5: fea220e2fb1cdea4ddb73832676f305d
       size: 2109
     - path: src/utils/common.py
-      md5: d162961d817182441383bdb0e674e685
-      size: 675
+      md5: 7b1751f92313035cd39ad7be3269dba1
+      size: 994
     - path: src/utils/data_mgmt.py
-      md5: af428c0128c6bbfbb36edfbf72cc87e1
-      size: 967
+      md5: 3f9dce569abfe6eb3140e7095540337b
+      size: 1063
     params:
       params.yaml:
         prepare.seed: 7
@@ -29,3 +29,35 @@ stages:
     - path: artifacts/prepared/train.tsv
       md5: 9aeb6a9a9ccd42652af85ca3de04ff8f
       size: 19027012
+  featurize:
+    cmd: python src/stage_02_featurization.py --config=configs/config.yaml --params=params.yaml
+    deps:
+    - path: artifacts/prepared/test.tsv
+      md5: f13b94e577e24763c72b856775c2b625
+      size: 4859307
+    - path: artifacts/prepared/train.tsv
+      md5: 9aeb6a9a9ccd42652af85ca3de04ff8f
+      size: 19027012
+    - path: configs/config.yaml
+      md5: 08183722cb3ac2fd82095185f5ce245f
+      size: 402
+    - path: src/stage_02_featurization.py
+      md5: 965af9b67bd98ff4c99a014eec1073a4
+      size: 3079
+    - path: src/utils/common.py
+      md5: 7b1751f92313035cd39ad7be3269dba1
+      size: 994
+    - path: src/utils/featurize.py
+      md5: 20df035d93510f2199ed61668f1db284
+      size: 554
+    params:
+      params.yaml:
+        featurize.max_features: 3000
+        featurize.n_grams: 2
+    outs:
+    - path: artifacts/features/test.pkl
+      md5: 913c8d5c95fa811d0440002183b75f37
+      size: 2565593
+    - path: artifacts/features/train.pkl
+      md5: 105553fccbd429d481f56730a03e99cd
+      size: 10175957
