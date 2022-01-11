@@ -1,0 +1,449 @@
+[2022-01-09 17:06:09,548: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:06:09,549: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:06:09,551: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:06:09,551: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:06:09,552: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-09 17:16:57,642: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:16:57,643: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:16:57,644: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:16:57,645: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:16:57,684: ERROR: stage_01_prepare]: 'ARTIFACTS'
+Traceback (most recent call last):
+  File "src/stage_01_prepare.py", line 53, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_prepare.py", line 34, in main
+    prepared_data_dir_path= os.path.join(artifacts["ARTIFACTS"], artifacts["PREPARED_DATA"])
+KeyError: 'ARTIFACTS'
+[2022-01-09 17:17:30,633: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:17:30,633: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:17:30,635: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:17:30,636: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:17:30,636: ERROR: stage_01_prepare]: 'ARTIFACTS'
+Traceback (most recent call last):
+  File "src/stage_01_prepare.py", line 53, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_prepare.py", line 34, in main
+    prepared_data_dir_path= os.path.join(artifacts["ARTIFACTS"], artifacts["PREPARED_DATA"])
+KeyError: 'ARTIFACTS'
+[2022-01-09 17:19:25,237: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:19:25,237: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:19:25,239: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:19:25,239: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:19:25,240: INFO: common]: created directory at: artifacts\prepared
+[2022-01-09 17:19:25,240: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-09 17:39:32,764: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:39:32,764: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:39:32,765: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:39:32,766: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:39:32,766: INFO: common]: created directory at: artifacts\prepared
+[2022-01-09 17:39:34,825: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-09 17:40:10,205: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:40:10,205: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:40:10,206: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:40:10,207: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:40:10,207: INFO: common]: created directory at: artifacts\prepared
+[2022-01-09 17:40:12,214: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-09 17:44:20,544: INFO: stage_01_prepare]: 
+********************
+[2022-01-09 17:44:20,544: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-09 17:44:20,545: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 17:44:20,546: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 17:44:20,546: INFO: common]: created directory at: artifacts\prepared
+[2022-01-09 17:44:22,759: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-09 20:21:55,891: INFO: stage_02_featurization]: 
+********************
+[2022-01-09 20:21:55,903: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-09 20:21:55,907: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 20:21:55,908: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 20:21:55,908: ERROR: stage_02_featurization]: 'featurized_DATA'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 54, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 33, in main
+    featurized_data_dir_path= os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["featurized_DATA"])
+KeyError: 'featurized_DATA'
+[2022-01-09 20:22:21,776: INFO: stage_02_featurization]: 
+********************
+[2022-01-09 20:22:21,777: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-09 20:22:21,779: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-09 20:22:21,780: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-09 20:22:21,780: INFO: common]: created directory at: artifacts\features
+[2022-01-09 20:22:22,629: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-09 20:22:22,634: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 17:48:29,405: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 17:48:29,416: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 17:48:29,419: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 17:48:29,420: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 17:48:29,420: INFO: common]: created directory at: artifacts\features
+[2022-01-10 17:48:30,226: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 17:48:30,226: ERROR: stage_02_featurization]: module 'numpy' has no attribute 'appray'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 82, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 49, in main
+    train_words= np.appray(df_train["text"].str.lower().values.astype("U"))
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\numpy\__init__.py", line 220, in __getattr__
+    "{!r}".format(__name__, attr))
+AttributeError: module 'numpy' has no attribute 'appray'
+[2022-01-10 17:49:27,350: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 17:49:27,350: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 17:49:27,352: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 17:49:27,353: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 17:49:27,353: INFO: common]: created directory at: artifacts\features
+[2022-01-10 17:49:27,579: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 17:49:40,730: ERROR: stage_02_featurization]: lower not found
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 82, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 62, in main
+    tfidf.fit(train_words_binary_matrix)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\feature_extraction\text.py", line 2045, in fit
+    X = super().fit_transform(raw_documents)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\feature_extraction\text.py", line 1321, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\feature_extraction\text.py", line 1220, in _count_vocab
+    for feature in analyze(doc):
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\feature_extraction\text.py", line 113, in _analyze
+    doc = preprocessor(doc)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\feature_extraction\text.py", line 71, in _preprocess
+    doc = doc.lower()
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\scipy\sparse\base.py", line 687, in __getattr__
+    raise AttributeError(attr + " not found")
+AttributeError: lower not found
+[2022-01-10 17:52:14,781: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 17:52:14,781: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 17:52:14,784: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 17:52:14,784: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 17:52:14,785: INFO: common]: created directory at: artifacts\features
+[2022-01-10 17:52:15,003: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 17:52:27,964: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-10 17:52:28,333: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 17:56:55,938: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 17:56:55,938: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 17:56:55,941: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 17:56:55,942: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 17:56:55,943: INFO: common]: created directory at: artifacts\features
+[2022-01-10 17:56:56,164: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 17:57:09,299: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-10 17:57:09,696: INFO: common]: the input data frame artifacts\prepared\test.tsv size if (4982, 3)
+
+[2022-01-10 17:57:10,912: INFO: featurize]: The output matrix artifacts\prepared\test.pkl has shape: (4982, 3002) and data type: float64
+[2022-01-10 17:57:11,274: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 17:57:59,917: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 17:57:59,917: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 17:57:59,919: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 17:57:59,920: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 17:57:59,920: INFO: common]: created directory at: artifacts\features
+[2022-01-10 17:58:00,144: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 17:58:12,627: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-10 17:58:12,688: INFO: common]: the input data frame artifacts\prepared\test.tsv size if (4982, 3)
+
+[2022-01-10 17:58:13,918: INFO: featurize]: The output matrix artifacts\features\test.pkl has shape: (4982, 3002) and data type: float64
+[2022-01-10 17:58:14,255: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 18:03:58,083: INFO: stage_01_prepare]: 
+********************
+[2022-01-10 18:03:58,083: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-10 18:03:58,085: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 18:03:58,086: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 18:03:58,087: INFO: common]: created directory at: artifacts\prepared
+[2022-01-10 18:04:01,161: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-10 18:04:03,420: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 18:04:03,420: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 18:04:03,422: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 18:04:03,423: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 18:04:03,423: INFO: common]: created directory at: artifacts\features
+[2022-01-10 18:04:03,673: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 18:04:16,892: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-10 18:04:16,966: INFO: common]: the input data frame artifacts\prepared\test.tsv size if (4982, 3)
+
+[2022-01-10 18:04:18,171: INFO: featurize]: The output matrix artifacts\features\test.pkl has shape: (4982, 3002) and data type: float64
+[2022-01-10 18:04:18,552: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 18:58:02,267: INFO: stage_03_train]: 
+********************
+[2022-01-10 18:58:02,277: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-10 18:58:02,279: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 18:58:02,280: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 18:58:02,281: INFO: common]: created directory at: artifacts\model
+[2022-01-10 18:58:02,300: ERROR: stage_03_train]: module 'numpy' has no attribute 'sequence'
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 74, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 39, in main
+    labels= np.sequence(matrix.shape[:,1].toarray())
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\numpy\__init__.py", line 220, in __getattr__
+    "{!r}".format(__name__, attr))
+AttributeError: module 'numpy' has no attribute 'sequence'
+[2022-01-10 18:58:16,642: INFO: stage_03_train]: 
+********************
+[2022-01-10 18:58:16,643: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-10 18:58:16,644: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 18:58:16,645: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 18:58:16,645: INFO: common]: created directory at: artifacts\model
+[2022-01-10 18:58:16,650: ERROR: stage_03_train]: tuple indices must be integers or slices, not tuple
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 74, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 39, in main
+    labels= np.squeeze(matrix.shape[:,1].toarray())
+TypeError: tuple indices must be integers or slices, not tuple
+[2022-01-10 19:04:16,106: INFO: stage_03_train]: 
+********************
+[2022-01-10 19:04:16,107: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-10 19:04:16,108: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:04:16,110: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:04:16,110: INFO: common]: created directory at: artifacts\model
+[2022-01-10 19:04:16,114: ERROR: stage_03_train]: tuple indices must be integers or slices, not tuple
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 74, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 39, in main
+    labels= np.squeeze(matrix.shape[:, 1].toarray())
+TypeError: tuple indices must be integers or slices, not tuple
+[2022-01-10 19:05:34,791: INFO: stage_03_train]: 
+********************
+[2022-01-10 19:05:34,791: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-10 19:05:34,793: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:05:34,794: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:05:34,794: INFO: common]: created directory at: artifacts\model
+[2022-01-10 19:05:34,807: INFO: stage_03_train]: input matrix shape: (20018, 3002)
+
+[2022-01-10 19:05:34,807: INFO: stage_03_train]: The shape of the X matrix is: (20018, 3000)
+
+[2022-01-10 19:05:34,807: INFO: stage_03_train]: The shape of the labels matrix is: (20018,)
+
+[2022-01-10 19:05:35,808: INFO: stage_03_train]: >>>>> stage Three completed!<<<<<
+
+[2022-01-10 19:08:48,070: INFO: stage_01_prepare]: 
+********************
+[2022-01-10 19:08:48,070: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-10 19:08:48,072: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:08:48,073: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:08:48,073: INFO: common]: created directory at: artifacts\prepared
+[2022-01-10 19:08:50,641: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-10 19:08:52,952: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 19:08:52,953: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 19:08:52,955: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:08:52,957: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:08:52,957: INFO: common]: created directory at: artifacts\features
+[2022-01-10 19:08:53,271: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 19:09:06,995: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-10 19:09:07,094: INFO: common]: the input data frame artifacts\prepared\test.tsv size if (4982, 3)
+
+[2022-01-10 19:09:08,523: INFO: featurize]: The output matrix artifacts\features\test.pkl has shape: (4982, 3002) and data type: float64
+[2022-01-10 19:09:09,016: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 19:09:10,608: INFO: stage_03_train]: 
+********************
+[2022-01-10 19:09:10,608: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-10 19:09:10,610: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:09:10,611: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:09:10,611: INFO: common]: created directory at: artifacts\model
+[2022-01-10 19:09:10,624: INFO: stage_03_train]: input matrix shape: (20018, 3002)
+
+[2022-01-10 19:09:10,624: INFO: stage_03_train]: The shape of the X matrix is: (20018, 3000)
+
+[2022-01-10 19:09:10,624: INFO: stage_03_train]: The shape of the labels matrix is: (20018,)
+
+[2022-01-10 19:09:11,649: INFO: stage_03_train]: >>>>> stage Three completed!<<<<<
+
+[2022-01-10 19:33:14,730: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:33:14,730: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:33:14,732: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:33:14,733: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:33:15,217: ERROR: stage_04_evaluate]: 'RandomForestClassifier' object has no attribute 'predict_proab'
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 62, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 45, in main
+    predicitions_by_class= model.predict_proab(X)
+AttributeError: 'RandomForestClassifier' object has no attribute 'predict_proab'
+[2022-01-10 19:33:31,543: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:33:31,543: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:33:31,544: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:33:31,546: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:33:32,028: ERROR: stage_04_evaluate]: 'RandomForestClassifier' object has no attribute 'predict_proabilities'
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 62, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 45, in main
+    predicitions_by_class= model.predict_proabilities(X)
+AttributeError: 'RandomForestClassifier' object has no attribute 'predict_proabilities'
+[2022-01-10 19:33:43,684: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:33:43,684: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:33:43,686: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:33:43,687: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:33:44,179: ERROR: stage_04_evaluate]: 'RandomForestClassifier' object has no attribute 'predict_proab'
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 62, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 45, in main
+    predicitions_by_class= model.predict_proab(X)
+AttributeError: 'RandomForestClassifier' object has no attribute 'predict_proab'
+[2022-01-10 19:34:40,679: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:34:40,679: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:34:40,681: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:34:40,682: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:34:41,267: INFO: stage_04_evaluate]: >>>>> stage Four completed!<<<<<
+
+[2022-01-10 19:46:52,047: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:46:52,047: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:46:52,050: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:46:52,052: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:46:52,297: ERROR: stage_04_evaluate]: Found input variables with inconsistent numbers of samples: [4982, 1]
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 101, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 57, in main
+    avg_precision= metrics.average_precision_score(labels, predicitions)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\metrics\_ranking.py", line 233, in average_precision_score
+    average_precision, y_true, y_score, average, sample_weight=sample_weight
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\metrics\_base.py", line 75, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\metrics\_ranking.py", line 206, in _binary_uninterpolated_average_precision
+    y_true, y_score, pos_label=pos_label, sample_weight=sample_weight
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\metrics\_ranking.py", line 858, in precision_recall_curve
+    y_true, probas_pred, pos_label=pos_label, sample_weight=sample_weight
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\metrics\_ranking.py", line 732, in _binary_clf_curve
+    check_consistent_length(y_true, y_score, sample_weight)
+  File "D:\Anaconda\envs\dvc-ml\lib\site-packages\sklearn\utils\validation.py", line 333, in check_consistent_length
+    % [int(l) for l in lengths]
+ValueError: Found input variables with inconsistent numbers of samples: [4982, 1]
+[2022-01-10 19:49:31,690: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:49:31,690: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:49:31,692: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:49:31,693: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:49:31,955: INFO: common]: json file saved at: scores.json
+[2022-01-10 19:49:31,976: INFO: common]: json file saved at: prc.json
+[2022-01-10 19:49:31,979: INFO: stage_04_evaluate]: >>>>> stage Four completed!<<<<<
+
+[2022-01-10 19:52:29,434: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:52:29,434: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:52:29,436: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:52:29,438: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:52:29,690: INFO: common]: json file saved at: scores.json
+[2022-01-10 19:52:29,712: INFO: common]: json file saved at: prc.json
+[2022-01-10 19:52:29,726: INFO: common]: json file saved at: roc.json
+[2022-01-10 19:52:29,729: INFO: stage_04_evaluate]: >>>>> stage Four completed!<<<<<
+
+[2022-01-10 19:57:40,359: INFO: stage_01_prepare]: 
+********************
+[2022-01-10 19:57:40,359: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-10 19:57:40,362: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:57:40,363: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:57:40,363: INFO: common]: created directory at: artifacts\prepared
+[2022-01-10 19:57:42,936: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-10 19:57:45,152: INFO: stage_02_featurization]: 
+********************
+[2022-01-10 19:57:45,152: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-10 19:57:45,155: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:57:45,157: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:57:45,157: INFO: common]: created directory at: artifacts\features
+[2022-01-10 19:57:45,413: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-10 19:57:58,984: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-10 19:57:59,060: INFO: common]: the input data frame artifacts\prepared\test.tsv size if (4982, 3)
+
+[2022-01-10 19:58:00,252: INFO: featurize]: The output matrix artifacts\features\test.pkl has shape: (4982, 3002) and data type: float64
+[2022-01-10 19:58:00,637: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-10 19:58:02,200: INFO: stage_03_train]: 
+********************
+[2022-01-10 19:58:02,201: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-10 19:58:02,203: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:58:02,204: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:58:02,204: INFO: common]: created directory at: artifacts\model
+[2022-01-10 19:58:02,218: INFO: stage_03_train]: input matrix shape: (20018, 3002)
+
+[2022-01-10 19:58:02,218: INFO: stage_03_train]: The shape of the X matrix is: (20018, 3000)
+
+[2022-01-10 19:58:02,218: INFO: stage_03_train]: The shape of the labels matrix is: (20018,)
+
+[2022-01-10 19:58:03,317: INFO: stage_03_train]: >>>>> stage Three completed!<<<<<
+
+[2022-01-10 19:58:04,650: INFO: stage_04_evaluate]: 
+********************
+[2022-01-10 19:58:04,650: INFO: stage_04_evaluate]: >>>>> stage Four started <<<<<
+[2022-01-10 19:58:04,653: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-10 19:58:04,654: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-10 19:58:04,927: INFO: common]: json file saved at: scores.json
+[2022-01-10 19:58:04,949: INFO: common]: json file saved at: prc.json
+[2022-01-10 19:58:04,963: INFO: common]: json file saved at: roc.json
+[2022-01-10 19:58:04,965: INFO: stage_04_evaluate]: >>>>> stage Four completed!<<<<<
+
+[2022-01-11 20:05:00,765: INFO: stage_01_prepare]: 
+********************
+[2022-01-11 20:05:00,765: INFO: stage_01_prepare]: >>>>> stage One started <<<<<
+[2022-01-11 20:05:00,767: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-11 20:05:00,768: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-11 20:05:00,768: INFO: common]: created directory at: artifacts\prepared
+[2022-01-11 20:05:03,004: INFO: stage_01_prepare]: >>>>> stage One completed!<<<<<
+
+[2022-01-11 20:05:08,202: INFO: stage_02_featurization]: 
+********************
+[2022-01-11 20:05:08,203: INFO: stage_02_featurization]: >>>>> stage Two started <<<<<
+[2022-01-11 20:05:08,206: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-11 20:05:08,207: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-11 20:05:08,207: INFO: common]: created directory at: artifacts\features
+[2022-01-11 20:05:08,976: INFO: common]: the input data frame artifacts\prepared\train.tsv size if (20018, 3)
+
+[2022-01-11 20:05:21,975: INFO: featurize]: The output matrix artifacts\features\train.pkl has shape: (20018, 3002) and data type: float64
+[2022-01-11 20:05:22,359: INFO: common]: the input data frame artifacts\prepared\test.tsv size if (4982, 3)
+
+[2022-01-11 20:05:23,561: INFO: featurize]: The output matrix artifacts\features\test.pkl has shape: (4982, 3002) and data type: float64
+[2022-01-11 20:05:23,906: INFO: stage_02_featurization]: >>>>> stage Two completed!<<<<<
+
+[2022-01-11 20:05:26,307: INFO: stage_03_train]: 
+********************
+[2022-01-11 20:05:26,307: INFO: stage_03_train]: >>>>> stage Three started <<<<<
+[2022-01-11 20:05:26,309: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-01-11 20:05:26,311: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-01-11 20:05:26,311: INFO: common]: created directory at: artifacts\model
+[2022-01-11 20:05:26,328: INFO: stage_03_train]: input matrix shape: (20018, 3002)
+
+[2022-01-11 20:05:26,328: INFO: stage_03_train]: The shape of the X matrix is: (20018, 3000)
+
+[2022-01-11 20:05:26,328: INFO: stage_03_train]: The shape of the labels matrix is: (20018,)
+
+[2022-01-11 20:05:27,408: INFO: stage_03_train]: >>>>> stage Three completed!<<<<<
+
